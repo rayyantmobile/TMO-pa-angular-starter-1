@@ -12,10 +12,10 @@
 <div *ngIf="!this.buttonVis">
     <form >
         <label>Recipe Name</label>
-        <input type="text" #recipeName>
+        <input type="textbox" #recipeName name="Recipe name">
         <br>
         <label>Recipe Description</label>
-        <input type="text" #recipeDesc>
+        <input type="textbox" #recipeDesc name="Recipe description">
         <button (click) = "onSub(recipeName.value, recipeDesc.value)">Submit</button>
     </form>
 </div>
