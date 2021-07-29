@@ -1,0 +1,21 @@
+<h1>My Recipes</h1>
+<tr *ngFor="let rec of recipe">
+    <div style="padding-bottom: 5%;">
+        <span>{{ rec.name }} </span>
+        <br>
+        <span>{{ rec.desc }} </span>
+    </div>
+</tr>
+<!-- <app-list></app-list> -->
+<button *ngIf="this.buttonVis" (click)="this.buttonVis = false">Add Recipe</button>
+<p *ngIf="this.buttonVis">There are no recipes to list</p>
+<div *ngIf="!this.buttonVis">
+    <form >
+        <label>Recipe Name</label>
+        <input type="text" #recipeName>
+        <br>
+        <label>Recipe Description</label>
+        <input type="text" #recipeDesc>
+        <button (click) = "onSub(recipeName.value, recipeDesc.value)">Submit</button>
+    </form>
+</div>
